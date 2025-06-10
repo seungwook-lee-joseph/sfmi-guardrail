@@ -1,11 +1,11 @@
 import os
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers import LlamaTokenizer, AutoModelForCausalLM
 
 def download_kanana_siren(model_id: str, save_path: str):
     os.makedirs(save_path, exist_ok=True)
 
     print(f"🔽 토크나이저 다운로드 중... ({model_id})")
-    tokenizer = AutoTokenizer.from_pretrained(model_id)
+    tokenizer = LlamaTokenizer.from_pretrained(model_id)
     tokenizer.save_pretrained(save_path)
     print(f"✅ 토크나이저 저장 완료: {save_path}")
 
