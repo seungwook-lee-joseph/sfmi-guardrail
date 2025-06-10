@@ -18,9 +18,9 @@ def download_kanana_model(model_id: str, save_path: str):
 
 if __name__ == "__main__":
     # 모델 ID (Hugging Face 기준 이름)
-    model_id = "kakaocorp/kanana-safeguard-8b/kanana-safeguard-siren-8b"
+    model_id = "kakaocorp/kanana-safeguard-siren-8b"
     # 저장 경로
-    save_path = os.path.join(os.getcwd(), "models/kanana-safeguard-siren-8b")
+    save_path = "/home/lsw9128/sfmi-guardrail/models/kakaocorp/kanana-safeguard-siren-8b"
 
     print(f"📦 모델을 {save_path} 경로에 저장합니다...\n")
     download_kanana_model(model_id, save_path)
